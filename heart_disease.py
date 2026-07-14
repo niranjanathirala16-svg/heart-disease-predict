@@ -191,6 +191,13 @@ print(confusion_matrix(y_test, y_pred_rf))
 print("\nclassification report=====")
 print(classification_report(y_test,y_pred_rf))
 
+
+import joblib
+
+joblib.dump(rf_model, "heart_model.pkl")
+
+print("Model saved successfully!")
+
 #SUPPORT VECTOR MECHINE
 
 from sklearn.svm import SVC
