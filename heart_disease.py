@@ -172,7 +172,7 @@ from sklearn.ensemble import RandomForestClassifier
 
 
 rf_model = RandomForestClassifier(
-    n_estimators=100,
+    n_estimators=30,
     random_state=42
 )
 
@@ -194,7 +194,7 @@ print(classification_report(y_test,y_pred_rf))
 import joblib
 
 
-joblib.dump(rf_model, "heart_model.pkl")
+joblib.dump(rf_model, "heart_model.pkl", compress=3)
 print("Random forest model saved succesfully!")
 
 
